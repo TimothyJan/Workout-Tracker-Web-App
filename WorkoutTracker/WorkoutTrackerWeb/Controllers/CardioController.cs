@@ -4,18 +4,18 @@ using WorkoutTrackerWeb.Models;
 
 namespace WorkoutTrackerWeb.Controllers
 {
-    public class WorkoutController : Controller
+    public class CardioController : Controller
     {
         private readonly ApplicationDbContext _db;
-        public WorkoutController(ApplicationDbContext db)
+        public CardioController(ApplicationDbContext db)
         {
             _db = db;
         }
 
         public IActionResult Index()
         {
-            IEnumerable<Workout> objWorkoutList = _db.Workouts;
-            return View(objWorkoutList);
+            IEnumerable<Cardio> objStrengthList = _db.Cardios;
+            return View(objStrengthList);
         }
 
         //GET
@@ -27,11 +27,11 @@ namespace WorkoutTrackerWeb.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Workout obj)
+        public IActionResult Create(Cardio obj)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                _db.Workouts.Add(obj);
+                _db.Cardios.Add(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }

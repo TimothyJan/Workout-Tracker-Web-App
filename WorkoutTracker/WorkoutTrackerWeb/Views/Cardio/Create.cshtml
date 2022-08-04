@@ -1,0 +1,53 @@
+﻿
+
+
+@model Cardio
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Create Cardio Training</h2>
+			<hr />
+		</div>
+
+		<div asp-validation-summary="All"></div>
+
+		<div class="mb-3">
+			<label asp-for="CardioName"></label>
+			<input asp-for="CardioName" class="form-control" />
+			<span asp-validation-for="CardioName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Distance"></label>
+			<input asp-for="Distance" class="form-control" />
+			<span asp-validation-for="Distance" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Speed"></label>
+			<input asp-for="Speed" class="form-control" />
+			<span asp-validation-for="Speed" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Time"></label>
+			<input asp-for="Time" class="form-control" />
+			<span asp-validation-for="Time" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CardioNote"></label>
+			<input asp-for="CardioNote" class="form-control" />
+			<span asp-validation-for="CardioNote" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<a asp-controller="Cardio" asp-action="Index" class="btn btn-secondary" style="width:250px">
+			Back to Cardio Training
+		</a>
+	</div>
+</form>
+
+@*
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
+*@

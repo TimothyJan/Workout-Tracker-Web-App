@@ -12,7 +12,7 @@ using WorkoutTrackerWeb.Data;
 namespace WorkoutTrackerWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220802234219_AddWorkoutToDatabase")]
+    [Migration("20220804211746_AddWorkoutToDatabase")]
     partial class AddWorkoutToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,17 +36,17 @@ namespace WorkoutTrackerWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Distance")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Note")
+                    b.Property<string>("CardioNote")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Speed")
-                        .HasColumnType("int");
+                    b.Property<string>("Distance")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Time")
-                        .HasColumnType("int");
+                    b.Property<string>("Speed")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Time")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CardioId");
 
@@ -61,9 +61,6 @@ namespace WorkoutTrackerWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StrengthId"), 1L, 1);
 
-                    b.Property<string>("Note")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int?>("RepsPerSet")
                         .HasColumnType("int");
 
@@ -72,6 +69,9 @@ namespace WorkoutTrackerWeb.Migrations
 
                     b.Property<string>("StrengthName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StrengthNote")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("Weights")
@@ -98,6 +98,9 @@ namespace WorkoutTrackerWeb.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("StrengthId")

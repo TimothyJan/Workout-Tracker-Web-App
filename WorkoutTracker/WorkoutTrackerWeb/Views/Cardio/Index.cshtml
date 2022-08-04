@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Workout>
+﻿
+@model IEnumerable<Cardio>
 
 @{
     ViewData["Title"] = "Index";
@@ -7,11 +8,11 @@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Workout List</h2>
+            <h2 class="text-primary">Cardio List</h2>
 		</div>
         <div class="col-6 text-end">
-            <a asp-controller="Workout" asp-action="Create" class="btn btn-primary">
-               <i class="bi bi-plus-circle"></i> &nbsp; Create New Workout
+            <a asp-controller="Cardio" asp-action="Create" class="btn btn-primary">
+               <i class="bi bi-plus-circle"></i> &nbsp; Create New Cardio Training
 			</a>
 		</div>
 	</div>
@@ -21,19 +22,19 @@
         <thead>
             <tr>
                 <th>
-                    Name
+                    Cardio Name
                 </th>
                 <th>
-                    Date
+                    Distance
                 </th>
                 <th>
-                    Note
+                    Speed/Level
                 </th>
                 <th>
-                    StrengthID
+                    Time
                 </th>
                 <th>
-                    CardioID
+                    Cardio Note
                 </th>
             </tr>
         </thead>
@@ -42,23 +43,22 @@
             {
                 <tr>
                     <td width="30%">
-                        @obj.Name
+                        @obj.CardioName
                     </td>
-                    <td width="20%">
-                        @obj.Date
+                    <td width="15%">
+                        @obj.Distance
                     </td>
-                    <td width="30%">
-                        @obj.Note
+                    <td width="15%">
+                        @obj.Speed
                     </td>
-                    <td width="10%">
-                        @obj.StrengthId
+                    <td width="15%">
+                        @obj.Time
                     </td>
-                    <td width="10%">
-                        @obj.CardioId
+                    <td width="25%">
+                        @obj.CardioNote
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8O/OjCwyiawmDvWS7tgCCQ4MnxORF4wRy1WqrTjfJB0=",
+  "Hash": "+BnS/YaZh7dTS9gZYfk0LSZa1hOJrorT2hUSkqvQZYY=",
   "Source": "WorkoutTrackerWeb",
   "BasePath": "_content/WorkoutTrackerWeb",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\Workout-Tracker-Web-App\\WorkoutTracker\\WorkoutTrackerWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WorkoutTrackerWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\Workout-Tracker-Web-App\\WorkoutTracker\\WorkoutTrackerWeb\\wwwroot\\css\\bootswatchTheme.css",
+      "SourceId": "WorkoutTrackerWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\Workout-Tracker-Web-App\\WorkoutTracker\\WorkoutTrackerWeb\\wwwroot\\",
+      "BasePath": "_content/WorkoutTrackerWeb",
+      "RelativePath": "css/bootswatchTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootswatchTheme.css"
     },
     {
       "Identity": "C:\\Users\\janti\\OneDrive\\Documents\\GitHub\\Workout-Tracker-Web-App\\WorkoutTracker\\WorkoutTrackerWeb\\wwwroot\\css\\site.css",

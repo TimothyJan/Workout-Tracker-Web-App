@@ -16,10 +16,10 @@ namespace WorkoutTrackerWeb.Migrations
                     CardioId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CardioName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Distance = table.Column<int>(type: "int", nullable: true),
-                    Speed = table.Column<int>(type: "int", nullable: true),
-                    Time = table.Column<int>(type: "int", nullable: true),
-                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Distance = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Speed = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Time = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardioNote = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -36,7 +36,7 @@ namespace WorkoutTrackerWeb.Migrations
                     Sets = table.Column<int>(type: "int", nullable: true),
                     RepsPerSet = table.Column<int>(type: "int", nullable: true),
                     Weights = table.Column<int>(type: "int", nullable: true),
-                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    StrengthNote = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,6 +51,7 @@ namespace WorkoutTrackerWeb.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StrengthId = table.Column<int>(type: "int", nullable: true),
                     CardioId = table.Column<int>(type: "int", nullable: true)
                 },

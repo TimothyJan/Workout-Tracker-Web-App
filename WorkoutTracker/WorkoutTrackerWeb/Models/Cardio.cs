@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WorkoutTrackerWeb.Models
@@ -9,10 +10,11 @@ namespace WorkoutTrackerWeb.Models
         [Key]
         public int CardioId { get; set; }
         [Required]
+        [DisplayName("Cardio Name")]
         public string CardioName { get; set; }
-        public int? Distance { get; set; }
-        public int? Speed { get; set; }
-        public int? Time { get; set; }
-        public string? Note { get; set; }
+        public string? Distance { get; set; }
+        public string? Speed { get; set; }
+        public string? Time { get; set; }
+        public string? CardioNote { get; set; }
     }
 }

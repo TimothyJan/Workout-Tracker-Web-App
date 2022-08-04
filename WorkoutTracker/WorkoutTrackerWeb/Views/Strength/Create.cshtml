@@ -1,0 +1,52 @@
+﻿
+
+@model Strength
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Create Strength Training</h2>
+			<hr />
+		</div>
+
+		<div asp-validation-summary="All"></div>
+
+		<div class="mb-3">
+			<label asp-for="StrengthName"></label>
+			<input asp-for="StrengthName" class="form-control" />
+			<span asp-validation-for="StrengthName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Sets"></label>
+			<input asp-for="Sets" class="form-control" />
+			<span asp-validation-for="Sets" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="RepsPerSet"></label>
+			<input asp-for="RepsPerSet" class="form-control" />
+			<span asp-validation-for="RepsPerSet" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Weights"></label>
+			<input asp-for="Weights" class="form-control" />
+			<span asp-validation-for="Weights" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="StrengthNote"></label>
+			<input asp-for="StrengthNote" class="form-control" />
+			<span asp-validation-for="StrengthNote" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<a asp-controller="Strength" asp-action="Index" class="btn btn-secondary" style="width:250px">
+			Back to Strength Training
+		</a>
+	</div>
+</form>
+
+@*
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
+*@
