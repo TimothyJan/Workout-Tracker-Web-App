@@ -6,7 +6,7 @@
 <form method="post">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
-			<h2 class="text-primary">Create Cardio Training</h2>
+			<h2 class="text-primary">Edit Cardio Training</h2>
 			<hr />
 		</div>
 
@@ -37,7 +37,7 @@
 			<input asp-for="CardioNote" class="form-control" />
 			<span asp-validation-for="CardioNote" class="text-danger"></span>
 		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
 		<a asp-controller="Cardio" asp-action="Index" class="btn btn-secondary" style="width:250px">
 			Back to Cardio Training
 		</a>

@@ -8,10 +8,9 @@ namespace WorkoutTrackerWeb.Models
     public class Cardio
     {
         [Key]
-        public int CardioId { get; set; }
+        public int Id { get; set; }
         [Required]
-        [DisplayName("Cardio Name")]
-        public string CardioName { get; set; }
+        public string Name { get; set; }
         public string? Distance { get; set; }
         public string? Speed { get; set; }
         public string? Time { get; set; }

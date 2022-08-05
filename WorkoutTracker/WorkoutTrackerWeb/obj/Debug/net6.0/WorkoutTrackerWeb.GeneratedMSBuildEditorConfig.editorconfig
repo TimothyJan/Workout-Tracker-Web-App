@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZGlvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Cardio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZGlvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Cardio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZGlvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,12 +47,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyZW5ndGhcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Strength/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyZW5ndGhcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Strength/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyZW5ndGhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Workout/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Workout/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/janti/OneDrive/Documents/GitHub/Workout-Tracker-Web-App/WorkoutTracker/WorkoutTrackerWeb/Views/Workout/Index.cshtml]

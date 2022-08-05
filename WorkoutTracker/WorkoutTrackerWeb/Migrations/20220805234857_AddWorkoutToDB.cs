@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WorkoutTrackerWeb.Migrations
 {
-    public partial class AddWorkoutToDatabase : Migration
+    public partial class AddWorkoutToDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +13,9 @@ namespace WorkoutTrackerWeb.Migrations
                 name: "Cardios",
                 columns: table => new
                 {
-                    CardioId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CardioName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Distance = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Speed = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Time = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -23,16 +23,16 @@ namespace WorkoutTrackerWeb.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cardios", x => x.CardioId);
+                    table.PrimaryKey("PK_Cardios", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Strengths",
                 columns: table => new
                 {
-                    StrengthId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StrengthName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sets = table.Column<int>(type: "int", nullable: true),
                     RepsPerSet = table.Column<int>(type: "int", nullable: true),
                     Weights = table.Column<int>(type: "int", nullable: true),
@@ -40,7 +40,7 @@ namespace WorkoutTrackerWeb.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Strengths", x => x.StrengthId);
+                    table.PrimaryKey("PK_Strengths", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -50,7 +50,7 @@ namespace WorkoutTrackerWeb.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StrengthId = table.Column<int>(type: "int", nullable: true),
                     CardioId = table.Column<int>(type: "int", nullable: true)

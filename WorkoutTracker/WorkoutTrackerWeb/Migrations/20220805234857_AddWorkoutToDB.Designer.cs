@@ -12,8 +12,8 @@ using WorkoutTrackerWeb.Data;
 namespace WorkoutTrackerWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220804211746_AddWorkoutToDatabase")]
-    partial class AddWorkoutToDatabase
+    [Migration("20220805234857_AddWorkoutToDB")]
+    partial class AddWorkoutToDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,20 +26,20 @@ namespace WorkoutTrackerWeb.Migrations
 
             modelBuilder.Entity("WorkoutTrackerWeb.Models.Cardio", b =>
                 {
-                    b.Property<int>("CardioId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CardioId"), 1L, 1);
-
-                    b.Property<string>("CardioName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CardioNote")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Distance")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Speed")
@@ -48,18 +48,22 @@ namespace WorkoutTrackerWeb.Migrations
                     b.Property<string>("Time")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CardioId");
+                    b.HasKey("Id");
 
                     b.ToTable("Cardios");
                 });
 
             modelBuilder.Entity("WorkoutTrackerWeb.Models.Strength", b =>
                 {
-                    b.Property<int>("StrengthId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StrengthId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("RepsPerSet")
                         .HasColumnType("int");
@@ -67,17 +71,13 @@ namespace WorkoutTrackerWeb.Migrations
                     b.Property<int?>("Sets")
                         .HasColumnType("int");
 
-                    b.Property<string>("StrengthName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("StrengthNote")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("Weights")
                         .HasColumnType("int");
 
-                    b.HasKey("StrengthId");
+                    b.HasKey("Id");
 
                     b.ToTable("Strengths");
                 });
@@ -93,7 +93,7 @@ namespace WorkoutTrackerWeb.Migrations
                     b.Property<int?>("CardioId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Date")
+                    b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")

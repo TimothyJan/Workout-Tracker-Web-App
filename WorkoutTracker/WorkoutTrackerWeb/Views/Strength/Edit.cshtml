@@ -1,11 +1,11 @@
 ﻿
-
 @model Strength
 
-<form method="post">
+
+<form method="post" asp-action="Edit">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
-			<h2 class="text-primary">Create Strength Training</h2>
+			<h2 class="text-primary">Edit Strength Training</h2>
 			<hr />
 		</div>
 
@@ -36,7 +36,7 @@
 			<input asp-for="StrengthNote" class="form-control" />
 			<span asp-validation-for="StrengthNote" class="text-danger"></span>
 		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
 		<a asp-controller="Strength" asp-action="Index" class="btn btn-secondary" style="width:250px">
 			Back to Strength Training
 		</a>

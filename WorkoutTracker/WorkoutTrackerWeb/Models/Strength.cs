@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WorkoutTrackerWeb.Models
 {
@@ -8,10 +6,9 @@ namespace WorkoutTrackerWeb.Models
     public class Strength
     {
         [Key]
-        public int StrengthId { get; set; }
+        public int Id { get; set; }
         [Required]
-        [DisplayName("Strength Name")]
-        public string StrengthName { get; set; }
+        public string Name { get; set; }
         public int? Sets { get; set; }
         public int? RepsPerSet { get; set; }
         public int? Weights { get; set; }

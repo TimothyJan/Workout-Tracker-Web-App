@@ -37,5 +37,37 @@ namespace WorkoutTrackerWeb.Controllers
             }
             return View(obj);
         }
+
+        //GET
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var workoutFromDb = _db.Workouts.Find(id);
+
+            if (workoutFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(workoutFromDb);
+        }
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Workout obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Workouts.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Workout updated successfully";
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
     }
 }
