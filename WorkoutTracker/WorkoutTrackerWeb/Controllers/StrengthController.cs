@@ -33,6 +33,7 @@ namespace WorkoutTrackerWeb.Controllers
             {
                 _db.Strengths.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Strength training created successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -70,10 +71,45 @@ namespace WorkoutTrackerWeb.Controllers
             {
                 _db.Strengths.Update(obj);
                 _db.SaveChanges();
-                TempData["success"] = "Workout updated successfully";
+                TempData["success"] = "Strength training updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
+        }
+
+        //GET
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var strengthFromDb = _db.Strengths.Find(id);
+
+            if (strengthFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(strengthFromDb);
+        }
+
+        //POST
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePOST(int? id)
+        {
+            var strengthFromDb = _db.Strengths.Find(id);
+
+            if (strengthFromDb == null)
+            {
+                return NotFound();
+            }
+
+            _db.Strengths.Update(strengthFromDb);
+            _db.SaveChanges();
+            TempData["success"] = "Strength training deleted successfully";
+            return RedirectToAction("Index");
         }
     }
 }

@@ -33,6 +33,7 @@ namespace WorkoutTrackerWeb.Controllers
             {
                 _db.Cardios.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Cardio training created successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -64,10 +65,45 @@ namespace WorkoutTrackerWeb.Controllers
             {
                 _db.Cardios.Update(obj);
                 _db.SaveChanges();
-                TempData["success"] = "Workout updated successfully";
+                TempData["success"] = "Cardio training updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
+        }
+
+        //GET
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var cardioFromDb = _db.Cardios.Find(id);
+
+            if (cardioFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(cardioFromDb);
+        }
+
+        //POST
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePOST(int? id)
+        {
+            var cardioFromDb = _db.Cardios.Find(id);
+
+            if (cardioFromDb == null)
+            {
+                return NotFound();
+            }
+
+            _db.Cardios.Update(cardioFromDb);
+            _db.SaveChanges();
+            TempData["success"] = "Cardio training updated successfully";
+            return RedirectToAction("Index");
         }
     }
 }
